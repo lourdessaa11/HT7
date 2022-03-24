@@ -32,22 +32,3 @@ public class Archivos {
     }
 }
 
-
-
-
-public class Archivos {
-	
-	/**
-	 * Lee y evalua expresiones en un archivo
-	 * @param data nombre de archivo
-	 * @throws IOException
-	 */
-	public static void leer(String data) throws IOException {		
-		BufferedReader reader = new BufferedReader(new FileReader(data));
-        String row;
-        while ((row = reader.readLine()) != null){
-        	Procesador.evaluate(row);
-        }
-        reader.close();
-	}
-}
