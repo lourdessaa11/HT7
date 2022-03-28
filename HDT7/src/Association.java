@@ -24,6 +24,12 @@ public class Association<K extends Comparable<K>, V> implements Comparable<Assoc
 		return key.compareTo(o.getKey());
 	}
 
+    @Override
+    public String toString(){
+        return key.toString();
+    }
+
+
 
 
 }
