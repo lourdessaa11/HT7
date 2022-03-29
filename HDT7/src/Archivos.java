@@ -1,3 +1,11 @@
+/**
+ * @author Manuel Martinez
+ * @author Lourdes Saavedra
+ * 
+ * Archivos.
+ * Lee el archivo txt y añade los valores a un Map de árboles.
+ */
+
 import java.util.HashMap;
 import java.io.FileReader;
 import java.io.IOException;
@@ -5,7 +13,12 @@ import java.io.BufferedReader;
 
 public class Archivos {
     
-
+    /**
+     * Lee el archivo y añade los valores a un Map de árboles
+     * @param path del archivo
+     * @return mapa de árboles
+     * @throws IOException si el archivo no existe
+     */
     public static HashMap<String, BinarySearchTree<Association<String, HashMap<String, String>>>> leer(String path) throws IOException{
         BufferedReader reader = new BufferedReader(new FileReader(path));
         HashMap<String, BinarySearchTree<Association<String, HashMap<String, String>>>> map = new HashMap<>();
