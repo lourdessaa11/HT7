@@ -45,11 +45,11 @@ public class Vista {
         int opcion = 0;
         while (opcion < 1 || opcion > 3){
             try {
-                mostrarMsg("\nIngrese idioma de origen\n1 - Español\n2 - Inglés\n3 - Francés\n");
+                mostrarMsg("\nIngrese idioma de origen\n1 - Espanol\n2 - Ingles\n3 - Frances\n");
                 opcion = scn.nextInt();
                 scn.nextLine();
             } catch (Exception e){
-                mostrarMsg("Ingrese un dato válido");
+                mostrarMsg("Ingrese un dato valido");
             }
         }
         return opcion;
@@ -63,11 +63,11 @@ public class Vista {
         int opcion = 0;
         while (opcion < 1 || opcion > 3){
             try {
-                mostrarMsg("\nIngrese idioma de destino\n1 - Español\n2 - Inglés\n3 - Francés\n");
+                mostrarMsg("\nIngrese idioma de destino\n1 - Espanol\n2 - Ingles\n3 - Frances\n");
                 opcion = scn.nextInt();
                 scn.nextLine();
             } catch (Exception e){
-                mostrarMsg("Ingrese un dato válido");
+                mostrarMsg("Ingrese un dato valido");
             }
         }
         return opcion;
@@ -89,11 +89,11 @@ public class Vista {
         int opcion = 0;
         while (opcion < 1 || opcion > 3){
             try {
-                mostrarMsg("\nIngrese idioma a recorrer\n1 - Español\n2 - Inglés\n3 - Francés\n");
+                mostrarMsg("\nIngrese idioma a recorrer\n1 - Espanol\n2 - Ingles\n3 - Frances\n");
                 opcion = scn.nextInt();
                 scn.nextLine();
             } catch (Exception e){
-                mostrarMsg("Ingrese un dato válido");
+                mostrarMsg("Ingrese un dato valido");
             }
         }
         return opcion;
