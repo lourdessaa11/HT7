@@ -14,7 +14,7 @@ public class Main {
         Vista vista = new Vista();
         while (true){
             try {
-                trad = new Traductor(Archivos.leer(vista.getPath()));
+                trad = new Traductor(Archivos.leerDiccionario(vista.getPath()));
                 break;
             } catch (Exception e){
                 vista.mostrarMsg("\nError al leer el archivo");
@@ -26,6 +26,7 @@ public class Main {
         String origen = "";
         String destino = "";
         String idioma = "";
+
         while (true){
             texto = vista.getTexto();
             if (texto.equals("Q")){
@@ -45,29 +46,35 @@ public class Main {
                 }
                 vista.mostrarMsg(trad.inorder(idioma));
             } else {
-                switch (vista.getOrigen()){
-                    case 1:
-                        origen = "spanish";
-                        break;
-                    case 2:
-                        origen = "english";
-                        break;
-                    case 3:
-                        origen = "french";
-                        break;
+                try {
+                    switch (vista.getOrigen()){
+                        case 1:
+                            origen = "spanish";
+                            break;
+                        case 2:
+                            origen = "english";
+                            break;
+                        case 3:
+                            origen = "french";
+                            break;
+                    }
+                    switch (vista.getDestino()){
+                        case 1:
+                            destino = "spanish";
+                            break;
+                        case 2:
+                            destino = "english";
+                            break;
+                        case 3:
+                            destino = "french";
+                            break;
+                    }
+                    for (String txt : Archivos.leerTexto(texto)){
+                        vista.mostrarMsg(trad.traducir(origen, destino, txt));
+                    }
+                } catch (Exception e){
+                    vista.mostrarMsg("Error al leer el archivo");
                 }
-                switch (vista.getDestino()){
-                    case 1:
-                        destino = "spanish";
-                        break;
-                    case 2:
-                        destino = "english";
-                        break;
-                    case 3:
-                        destino = "french";
-                        break;
-                }
-                vista.mostrarMsg(trad.traducir(origen, destino, texto));
             }
         }
 

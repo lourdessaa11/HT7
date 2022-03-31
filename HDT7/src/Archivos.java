@@ -10,6 +10,7 @@ import java.util.HashMap;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.BufferedReader;
+import java.util.ArrayList;
 
 public class Archivos {
     
@@ -19,7 +20,7 @@ public class Archivos {
      * @return mapa de árboles
      * @throws IOException si el archivo no existe
      */
-    public static HashMap<String, BinarySearchTree<Association<String, HashMap<String, String>>>> leer(String path) throws IOException{
+    public static HashMap<String, BinarySearchTree<Association<String, HashMap<String, String>>>> leerDiccionario(String path) throws IOException{
         BufferedReader reader = new BufferedReader(new FileReader(path));
         HashMap<String, BinarySearchTree<Association<String, HashMap<String, String>>>> map = new HashMap<>();
         
@@ -45,6 +46,18 @@ public class Archivos {
         reader.close();
 
         return map;
+    }
+
+    public static ArrayList<String> leerTexto(String path) throws IOException{
+        ArrayList<String> data = new ArrayList<String>();
+        BufferedReader reader = new BufferedReader(new FileReader(path));
+        String row;
+        while ((row = reader.readLine()) != null){
+        	data.add(row);
+        }
+        reader.close();
+
+        return data;
     }
 }
 

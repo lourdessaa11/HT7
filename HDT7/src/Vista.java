@@ -28,12 +28,13 @@ public class Vista {
         return scn.nextLine();
     }
 
+
     /**
      * Obtiene texto a traducir
      * @return texto
      */
     public String getTexto(){
-        mostrarMsg("\nIngrese texto a traducir\n(Ingrese 'INORDER' para recorrer un diccionario inorder y Q para salir)\n");
+        mostrarMsg("\nIngrese path del archivo de texto a traducir\n(Ingrese 'INORDER' para recorrer un diccionario inorder y Q para salir)\n");
         return scn.nextLine();
     }
 

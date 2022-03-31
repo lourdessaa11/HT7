@@ -5,6 +5,7 @@
  * BinarySearchTree.
  * Estructura de árbol binario
  * Los elementos del árbol son comparables
+ * Adaptado de https://www.softwaretestinghelp.com/binary-search-tree-in-java/ 
  */
 
 public class BinarySearchTree<E extends Comparable<E>> {
